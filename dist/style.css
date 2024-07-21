@@ -1,0 +1,150 @@
+/* Apply base styles */
+* {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.btn-orange {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background-color: #c43400;
+  color: #b8b8b8;
+}
+
+.title {
+  font-size: 3rem;
+  color: transparent;
+  background: linear-gradient(90deg, #fff, #ff4500);
+  background-clip: text;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* navbar toggler */
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+  border: 0;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  color: #ff4500;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.navbar-brand span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: #ff4500;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Dropdown Icon Color */
+.dropdown a i {
+  color: #ff4500;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  background-color: #000;
+  border: 1px solid #555555;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+/* Dropdown Item Styling */
+.dropdown-item {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+/* navbar collapse */
+.navbar-collapse {
+  background-color: #000;
+  box-shadow: 0px 0px 20px 1px #ff440083;
+  border-radius: 0.5rem;
+}
+
+/* hero section */
+
+.hero {
+  min-height: 100vh;
+}
+
+/* responsive breakpoint */
+@media screen and (min-width: 992px) {
+  /* navbar brand */
+  .navbar-brand {
+    border-right: 1px solid #555555;
+  }
+
+  /* Hover Effect for Dropdown */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    width: max-content;
+  }
+
+  .dropdown-toggle {
+    pointer-events: none;
+    cursor: pointer !important;
+  }
+
+  /* navbar collapse */
+  .navbar-collapse {
+    background-color: #000;
+    box-shadow: none;
+  }
+}
+
+/* responsive tablet */
+@media screen and (min-width: 768px) {
+  .navbar-collapse.collapse-show {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
