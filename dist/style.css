@@ -32,7 +32,11 @@ body {
   color: #fff;
 }
 
-/* navbar toggler */
+section .container-fluid {
+  padding: 0.5rem 1.25rem;
+}
+
+/* Navbar Toggler */
 .navbar-toggler {
   border: 0;
 }
@@ -95,27 +99,106 @@ body {
   color: #fff;
 }
 
-/* navbar collapse */
+/* Navbar Collapse */
 .navbar-collapse {
   background-color: #000;
   box-shadow: 0px 0px 20px 1px #ff440083;
   border-radius: 0.5rem;
 }
 
-/* hero section */
-
+/* Hero Section */
 .hero {
-  min-height: 100vh;
+  margin-top: 4rem;
 }
 
-/* responsive breakpoint */
+/* Image Container */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+.hero-image-sec {
+  position: absolute;
+  width: 150%;
+  left: -25%;
+  top: 40%;
+}
+
+/* Gradient Overlay */
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  pointer-events: none;
+}
+
+/* SVG Styling */
+.image-container svg {
+  position: absolute;
+  width: 80%;
+  left: 15%;
+  top: 20%;
+  z-index: -1; /* Ensure SVG stays behind the image */
+}
+
+/* Responsive Breakpoints */
+
+/* Mobile Landscape */
+@media screen and (min-width: 576px) {
+  .hero-image {
+    width: 50%;
+  }
+
+  .hero-image-sec {
+    width: 110%;
+    left: -5%;
+  }
+
+  .title {
+    font-size: 3.2rem;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  section .container-fluid {
+    padding: 0.5rem 2rem;
+  }
+
+  .navbar-collapse.collapse-show {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 80%;
+    margin-top: -3rem;
+  }
+
+  .hero-image-sec {
+    width: 150%;
+    left: -25%;
+  }
+}
+
+/* Laptop */
 @media screen and (min-width: 992px) {
-  /* navbar brand */
   .navbar-brand {
     border-right: 1px solid #555555;
   }
 
-  /* Hover Effect for Dropdown */
   .nav-item.dropdown:hover .dropdown-menu {
     display: flex;
     flex-wrap: wrap;
@@ -132,19 +215,78 @@ body {
     cursor: pointer !important;
   }
 
-  /* navbar collapse */
   .navbar-collapse {
     background-color: #000;
     box-shadow: none;
   }
+
+  .hero-image {
+    width: 80%;
+    margin-top: -5rem;
+  }
 }
 
-/* responsive tablet */
-@media screen and (min-width: 768px) {
-  .navbar-collapse.collapse-show {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  section .container-fluid {
+    padding: 0.5rem 4rem;
+  }
+
+  .hero {
+    margin-top: 2rem;
+  }
+
+  .hero-image {
+    width: 60%;
+    margin-top: -3rem;
+  }
+
+  .hero-image-sec {
+    width: 120%;
+    left: -10%;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1440px) {
+  section .container-fluid {
+    padding: 0.5rem 6rem;
+  }
+
+  .hero {
+    margin-top: 0;
+  }
+
+  .hero-image {
+    width: 80%;
+    margin-top: -7rem;
+  }
+
+  .hero-image-sec {
+    width: 150%;
+    left: -25%;
+    margin-top: -7rem;
+  }
+
+  .title {
+    font-size: 5.5rem;
+    width: 100%;
+  }
+
+  .text {
+    font-size: 1.3rem;
+    width: 75%;
+  }
+
+  .btn-orange {
+    font-size: 1.2rem;
   }
 }
