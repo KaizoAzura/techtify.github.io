@@ -5,6 +5,18 @@
   padding: 0;
 }
 
+/* animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* end animation */
+
 body {
   background-color: #000;
 }
@@ -22,9 +34,11 @@ body {
 .title {
   font-size: 3rem;
   color: transparent;
-  background: linear-gradient(90deg, #fff, #ff4500);
+  background: linear-gradient(90deg, #fff, #ff4500, #fff);
   background-clip: text;
   font-weight: 700;
+  animation: gradient-animation 10s alternate infinite;
+  background-size: 200%;
 }
 
 .text {
@@ -107,10 +121,32 @@ section .container-fluid {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
   margin-top: 4rem;
+  position: relative;
+  text-align: center;
+  color: #fff;
 }
 
+/* Radial Gradient */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(29, 8, 0, 0.15) 20%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  z-index: -1;
+  filter: blur(50px);
+  animation: gradient-animation 10s alternate infinite;
+  background-size: 200%;
+}
 /* Image Container */
 .image-container {
   position: relative;
@@ -138,7 +174,7 @@ section .container-fluid {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   pointer-events: none;
 }
 
@@ -279,6 +315,7 @@ section .container-fluid {
   .title {
     font-size: 5.5rem;
     width: 100%;
+    line-height: 1em;
   }
 
   .text {
