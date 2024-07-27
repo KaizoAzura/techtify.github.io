@@ -29,16 +29,26 @@ body {
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
 /* end animation */
 
 .btn-orange {
-  background-color: #ff4500;
+  background-color: transparent;
   color: #fff;
+  border: 2px solid #fff;
+  padding: 0.5rem 2rem;
 }
 
 .btn-orange:hover {
-  background-color: #c43400;
-  color: #b8b8b8;
+  background-color: #ff4500;
+  color: #fff;
 }
 
 .title {
@@ -58,7 +68,18 @@ body {
   line-height: 1.5em;
 }
 
+.card {
+  background: linear-gradient(180deg, #0a0a0a, #000);
+  border: 1px solid #494949;
+  color: #fff;
+  border-radius: 0.5rem;
+}
 /* Navbar Toggler */
+
+.navbar {
+  background-color: #000;
+  box-shadow: 0px 3px 10px 0px #000;
+}
 .navbar-toggler {
   border: 0;
 }
@@ -97,7 +118,7 @@ body {
 }
 
 /* Button Styling */
-.btn {
+.btn-orange {
   border-radius: 0.3rem;
   font-weight: 500;
 }
@@ -147,11 +168,47 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
+/* slider section */
+
+.merk .slider {
+  overflow: hidden;
+}
+
+.merk .slide-track {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.merk .slide {
+  flex: 0 0 auto;
+}
+
+.slider .slide img {
+  width: 50px;
+  height: 50px;
+}
+
+/* feature section */
+
+.feature-icon {
+  font-size: 3.5rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.feature-text {
+  font-size: 1rem;
+}
+
 /* Responsive Breakpoints */
 
 /* Mobile Landscape */
 @media screen and (min-width: 576px) {
-  /* hero section */
+  /* merk section */
 }
 
 /* Tablet */
@@ -167,7 +224,7 @@ body {
   .hero {
     background: radial-gradient(
         rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.9),
         rgba(0, 0, 0, 1)
       ),
       url(../dist/img/hero-bg.png);
@@ -183,6 +240,23 @@ body {
 
   .text {
     font-size: 1.2rem;
+  }
+
+  /* merk section */
+
+  .slide {
+    cursor: pointer;
+  }
+
+  .slider .slide img {
+    width: 75px;
+    height: 75px;
+    transition: 0.4s;
+  }
+
+  .slider .slide img:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
   }
 }
 
@@ -215,8 +289,14 @@ body {
 
   /* hero section */
   .hero {
-    padding: 10rem 1rem;
+    padding: 8rem 1rem;
     background-size: 100%;
+  }
+
+  /* merk section */
+  .merk .slide-track {
+    animation: none;
+    flex-wrap: wrap;
   }
 }
 
