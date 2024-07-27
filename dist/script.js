@@ -1,16 +1,16 @@
-// Animation Slide
-window.addEventListener("resize", adjustAnimation);
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  const featuresSection = document.querySelector("#features");
+  const featuresTop = featuresSection.offsetTop;
+  const featuresHeight = featuresSection.offsetHeight;
+  const scrollPosition = window.scrollY;
 
-function adjustAnimation() {
-  const slider = document.querySelector(".logo-slider");
-  const containerWidth = document.querySelector(".logo-container").offsetWidth;
-  const totalWidth = Array.from(slider.children).reduce(
-    (total, img) => total + img.offsetWidth,
-    0
-  );
-
-  slider.style.animationDuration = `${(totalWidth / containerWidth) * 2}s`;
-}
-
-// Initial adjustment
-adjustAnimation();
+  if (
+    scrollPosition >= featuresTop &&
+    scrollPosition <= featuresTop + featuresHeight
+  ) {
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+});
