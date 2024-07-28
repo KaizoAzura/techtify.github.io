@@ -35,6 +35,15 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="dist/style.css" />
+
+    <!-- link animation -->
+    <!-- Animation On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- animated.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <!-- navbar -->
@@ -114,12 +123,18 @@
     <!-- hero section -->
     <section class="hero container-fluid mt-5">
       <div class="container text-center py-5">
-        <h1 class="title">Explore the Latest in Tech</h1>
-        <p class="text">
+        <h1 class="title animate__animated animate__fadeInUp animate__faster">
+          Explore the Latest in Tech
+        </h1>
+        <p class="text animate__animated animate__fadeInUp">
           Find the best deals on the newest electronics, from smartphones to
           smart home devices.
         </p>
-        <a href="#" class="btn btn-orange">Discover Product</a>
+        <a
+          href="#"
+          class="btn btn-orange animate__animated animate__fadeInUp animate__slow"
+          >Discover Product</a
+        >
       </div>
     </section>
     <!-- end hero section -->
@@ -129,36 +144,84 @@
       <div class="slider">
         <div class="slide-track row">
           <div class="slide col-3 col-sm-2 col-lg-2 text-center">
-            <img src="dist/img/logo/icons8-windows-11-256.png" alt="Windows" />
+            <img
+              data-aos="zoom-in"
+              src="dist/img/logo/icons8-windows-11-256.png"
+              alt="Windows"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 text-center">
-            <img src="dist/img/logo/icons8-amd-150.png" alt="AMD" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              src="dist/img/logo/icons8-amd-150.png"
+              alt="AMD"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 text-center">
-            <img src="dist/img/logo/icons8-apple-150.png" alt="Apple" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              src="dist/img/logo/icons8-apple-150.png"
+              alt="Apple"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 text-center">
-            <img src="dist/img/logo/icons8-android-150.png" alt="Android" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              src="dist/img/logo/icons8-android-150.png"
+              alt="Android"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 text-center">
-            <img src="dist/img/logo/icons8-nvidia-150.png" alt="NVidia" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="800"
+              src="dist/img/logo/icons8-nvidia-150.png"
+              alt="NVidia"
+            />
           </div>
           <div
             class="slide col-3 col-sm-2 col-lg-2 mt-lg-5 offset-lg-2 text-center"
           >
-            <img src="dist/img/logo/icons8-xiaomi-150.png" alt="Xiaomi" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="800"
+              src="dist/img/logo/icons8-xiaomi-150.png"
+              alt="Xiaomi"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 mt-lg-5 text-center">
-            <img src="dist/img/logo/icons8-walmart-150.png" alt="Walmart" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              src="dist/img/logo/icons8-walmart-150.png"
+              alt="Walmart"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 mt-lg-5 text-center">
-            <img src="dist/img/logo/icons8-amazon-150.png" alt="Amazon" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              src="dist/img/logo/icons8-amazon-150.png"
+              alt="Amazon"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 mt-lg-5 text-center">
-            <img src="dist/img/logo/icons8-ebay-150.png" alt="Ebay" />
+            <img
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              src="dist/img/logo/icons8-ebay-150.png"
+              alt="Ebay"
+            />
           </div>
           <div class="slide col-3 col-sm-2 col-lg-2 mt-lg-5 text-center">
-            <img src="dist/img/logo/icons8-chrome-150.png" alt="Chrome" />
+            <img
+              data-aos="zoom-in"
+              src="dist/img/logo/icons8-chrome-150.png"
+              alt="Chrome"
+            />
           </div>
         </div>
       </div>
@@ -167,12 +230,18 @@
     <!-- end merk section -->
 
     <!-- features section -->
-    <section id="features" class="features container-fluid py-5 px-4 my-5">
-      <h5 class="subheading mt-5">Unveiling the Best of Our Services</h5>
-      <h1 class="title mt-4 my-lg-4">
+    <section
+      id="features"
+      class="features container-fluid py-5 px-4 my-5"
+      data-aos="fade-up"
+    >
+      <h5 class="subheading mt-5" data-aos="fade-up" data-aos-delay="400">
+        Unveiling the Best of Our Services
+      </h5>
+      <h1 class="title mt-4 my-lg-4" data-aos="fade-up" data-aos-delay="400">
         Discover the unique aspects that set us apart
       </h1>
-      <p class="text">
+      <p class="text" data-aos="fade-up" data-aos-delay="400">
         At Techtify, we bring you the latest and greatest in electronics. Our
         platform is designed to offer you a seamless shopping experience,
         top-notch customer service, and unbeatable prices on a wide range of
@@ -181,7 +250,7 @@
       </p>
 
       <div class="row px-3 my-5">
-        <div class="col-md-4 p-4 feature-card">
+        <div class="col-md-4 p-4 feature-card" data-aos="zoom-in">
           <h5 class="feature-title">Extensive Product Range</h5>
           <p>
             Find the latest gadgets, electronics, and accessories at unbeatable
@@ -189,7 +258,11 @@
             make informed purchases.
           </p>
         </div>
-        <div class="col-md-4 p-4 feature-card">
+        <div
+          class="col-md-4 p-4 feature-card"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
           <h5 class="feature-title">Seamless Shopping Experience</h5>
           <p>
             Experience fast and reliable shipping with real-time tracking,
@@ -197,7 +270,11 @@
             recommendations enhance your shopping journey.
           </p>
         </div>
-        <div class="col-md-4 p-4 feature-card">
+        <div
+          class="col-md-4 p-4 feature-card"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <h5 class="feature-title">Exceptional Customer Support</h5>
           <p>
             Benefit from 24/7 customer support, honest reviews and ratings, and
@@ -213,17 +290,26 @@
     <section id="software" class="software container-fluid py-5 px-4 my-5">
       <div class="row d-md-flex align-items-center my-md-5">
         <!-- Explanation Column -->
+        <div class="col-12 text-start text-md-center">
+          <h5 class="subheading" data-aos="fade-up">
+            Not Just Hardware, But Software Too
+          </h5>
+          <h1
+            class="title mt-4 my-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Discover the software
+          </h1>
+        </div>
         <div class="col-md-6">
-          <h5 class="subheading">Not Just Hardware, But Software Too</h5>
-          <h1 class="title mt-4 my-lg-4">Discover the software</h1>
-
           <!-- Tabs for slider -->
           <ul
             class="nav nav-tabs d-flex flex-column mt-4"
             id="softwareTabs"
             role="tablist"
           >
-            <li class="nav-item mb-3" role="presentation">
+            <li class="nav-item mb-3" role="presentation" data-aos="fade-right">
               <button
                 class="nav-link text-start active"
                 id="tab1"
@@ -237,7 +323,12 @@
                 Legitimate and Licensed Software
               </button>
             </li>
-            <li class="nav-item mb-3" role="presentation">
+            <li
+              class="nav-item mb-3"
+              role="presentation"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <button
                 class="nav-link text-start"
                 id="tab2"
@@ -251,7 +342,12 @@
                 Competitive Pricing
               </button>
             </li>
-            <li class="nav-item mb-3" role="presentation">
+            <li
+              class="nav-item mb-3"
+              role="presentation"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <button
                 class="nav-link text-start"
                 id="tab3"
@@ -265,7 +361,12 @@
                 Comprehensive Support
               </button>
             </li>
-            <li class="nav-item mb-3" role="presentation">
+            <li
+              class="nav-item mb-3"
+              role="presentation"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
               <button
                 class="nav-link text-start"
                 id="tab4"
@@ -283,7 +384,7 @@
         </div>
 
         <!-- Slider Column -->
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="tab-content mt-4" id="softwareTabContent">
             <div
               class="tab-pane px-lg-5 fade show active"
@@ -306,10 +407,7 @@
                     </h5>
                     <p class="card-text">
                       At Techtify, we ensure that all the software we offer is
-                      100% legitimate and licensed. This means customers can
-                      trust that they are getting authentic products that comply
-                      with industry standards and legal requirements. No more
-                      worries about counterfeit software or security risks.
+                      100% legitimate and licensed.
                     </p>
                   </div>
                 </div>
@@ -334,11 +432,7 @@
                     <h5 class="card-title my-3">Competitive Pricing</h5>
                     <p class="card-text">
                       We understand that cost is a significant factor when
-                      purchasing software. That's why we strive to provide the
-                      most competitive prices in the market without compromising
-                      on quality. Our customers can enjoy premium software at
-                      affordable rates, along with frequent discounts and
-                      special offers.
+                      purchasing software.
                     </p>
                   </div>
                 </div>
@@ -363,11 +457,7 @@
                     <h5 class="card-title my-3">Comprehensive Support</h5>
                     <p class="card-text">
                       Purchasing software from Techtify comes with the added
-                      benefit of comprehensive customer support. Our team is
-                      available 24/7 to assist with installation,
-                      troubleshooting, and any other technical issues. This
-                      ensures a smooth and hassle-free experience from purchase
-                      to usage.
+                      benefit of comprehensive customer support.
                     </p>
                   </div>
                 </div>
@@ -395,14 +485,22 @@
                       Techtify offers a wide selection of software products to
                       meet various needs, from operating systems and
                       productivity suites to specialized industry-specific
-                      applications. Our diverse catalog ensures that customers
-                      can find exactly what they need, all in one place.
+                      applications.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-12 text-center mt-5">
+          <a
+            href="#"
+            class="btn btn-orange"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            >Discover Software</a
+          >
         </div>
       </div>
     </section>
@@ -415,5 +513,12 @@
 
     <!-- link script js -->
     <script src="dist/script.js"></script>
+
+    <!-- link script animation -->
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -57,8 +57,8 @@ body {
   background: linear-gradient(90deg, #fff, #ff4500, #fff);
   background-clip: text;
   font-weight: 700;
-  animation: gradient-animation 10s alternate infinite;
-  background-size: 200%;
+  animation: none;
+  background-size: 100%;
   line-height: 1.2em;
 }
 
@@ -268,13 +268,21 @@ body {
 }
 
 /* software section */
+.software {
+  background: radial-gradient(at right, #ff44000f, #000);
+}
+.software .title {
+  background-size: 200%;
+  animation: gradient-animation 10s alternate infinite;
+}
+
 .software .subheading {
   color: #fff;
 }
 
 /* nav tabs */
 .nav-tabs .nav-item button {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #555555;
   border: 0;
@@ -382,6 +390,9 @@ body {
   }
 
   /* software section */
+  .software {
+    background: radial-gradient(at left, #ff44000f, #000);
+  }
 
   .software .title {
     font-size: 3rem;
