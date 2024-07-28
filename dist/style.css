@@ -68,6 +68,12 @@ body {
   line-height: 1.5em;
 }
 
+.subheading {
+  color: #101010;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 /* Navbar Toggler */
 
 .navbar {
@@ -233,12 +239,6 @@ body {
   border-radius: 1rem;
 }
 
-.features .subheading {
-  color: #101010;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
 .features .title {
   background: linear-gradient(90deg, #1100ff, #ff4500);
   background-clip: text;
@@ -265,6 +265,65 @@ body {
 .features .feature-card p {
   font-size: 1rem;
   color: #101010;
+}
+
+/* software section */
+.software .subheading {
+  color: #fff;
+}
+
+/* nav tabs */
+.nav-tabs .nav-item button {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #555555;
+  border: 0;
+}
+
+.nav-tabs .nav-item button.active {
+  border: 0;
+  border-left: 1px solid #ff4500;
+  border-radius: 0;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-item button:hover {
+  border: 0;
+  border-left: 1px solid #ff4500;
+  border-radius: 0;
+}
+.nav-tabs .nav-item button:focus {
+  border: 0;
+  border-left: 1px solid #ff4500;
+  border-radius: 0;
+}
+
+/* slider card */
+
+.slide-card .card {
+  background: radial-gradient(at bottom, #ff44001b, #000);
+  border-radius: 0.5rem;
+  border: 1px solid #1e1e1e;
+  color: #fff;
+}
+
+.slide-card .card img {
+  filter: drop-shadow(0 0 20px #ff44002a);
+  background-color: transparent;
+}
+
+.slide-card .card h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.slide-card .card p {
+  font-size: 1rem;
+  color: #e4e4e4;
+  font-weight: 400;
+  line-height: 2em;
 }
 
 /* Responsive Breakpoints */
@@ -321,6 +380,12 @@ body {
     transform: scale(1.1);
     transition: 0.4s;
   }
+
+  /* software section */
+
+  .software .title {
+    font-size: 3rem;
+  }
 }
 
 /* Laptop */
@@ -374,6 +439,16 @@ body {
 
   .features .text {
     width: 75%;
+  }
+
+  /* software section */
+
+  .software .title {
+    font-size: 4rem;
+  }
+
+  .slide-card .card .card-text {
+    font-size: 0.9rem;
   }
 }
 
