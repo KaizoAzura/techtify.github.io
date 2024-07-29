@@ -334,6 +334,19 @@ body {
   line-height: 2em;
 }
 
+/* affiliates hero section */
+
+.affiliate-hero {
+  background: radial-gradient(at left, #ff44000f, #ffffff0b, #000);
+}
+
+.affiliate-hero .title {
+  color: #fff;
+}
+.affiliate-hero .title span {
+  color: #ff4500;
+}
+
 /* Responsive Breakpoints */
 
 /* Mobile Landscape */
@@ -396,6 +409,11 @@ body {
 
   .software .title {
     font-size: 3rem;
+  }
+
+  /* affiliate section */
+  .affiliate-hero .title {
+    width: 75%;
   }
 }
 
