@@ -1,4 +1,4 @@
-/* Apply base styles */
+/* Global Styles */
 * {
   font-family: "Space Grotesk", sans-serif;
   margin: 0;
@@ -9,12 +9,11 @@ body {
   background-color: #000;
 }
 
-/* animation */
+/* Animations */
 @keyframes gradient-animation {
   0% {
     background-position: left;
   }
-
   100% {
     background-position: right;
   }
@@ -37,20 +36,24 @@ body {
     transform: translateX(calc(-100%));
   }
 }
-/* end animation */
 
+/* Button Styles */
 .btn-orange {
   background-color: transparent;
   color: #fff;
   border: 2px solid #fff;
   padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  font-weight: 500;
 }
 
-.btn-orange:hover {
+.btn-orange:hover,
+.dropdown-item:hover {
   background-color: #ff4500;
   color: #fff;
 }
 
+/* Typography */
 .title {
   font-size: 3rem;
   color: transparent;
@@ -68,25 +71,29 @@ body {
   line-height: 1.5em;
 }
 
+.features .feature-card h5,
 .subheading {
-  color: #101010;
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-/* Navbar Toggler */
+.subheading {
+  color: #101010;
+}
 
+/* Navbar Styles */
 .navbar {
   background-color: #000;
-  box-shadow: 0px 3px 10px 0px #000;
+  box-shadow: 0 3px 10px 0 #000;
 }
+
 .navbar-toggler {
   border: 0;
 }
 
 .navbar-toggler:focus {
   box-shadow: none;
-  outline: none;
+  outline: 0;
   border: 0;
 }
 
@@ -96,10 +103,9 @@ body {
 
 .navbar-scrolled {
   background-color: #e4e4e4;
-  box-shadow: 0px 3px 10px 0px #aaa;
+  box-shadow: 0 3px 10px 0 #aaa;
 }
 
-/* Navbar Brand */
 .navbar-brand {
   color: #ff4500;
   font-weight: 600;
@@ -111,33 +117,26 @@ body {
   font-size: 1.5rem;
 }
 
+.navbar-scrolled .dropdown-item,
+.navbar-scrolled .nav-link,
 .navbar-scrolled .navbar-brand span {
   color: #000;
 }
 
+.affiliate-hero .title span,
+.dropdown a i,
 .navbar-brand:hover {
   color: #ff4500;
 }
 
-/* Navbar Links */
 .nav-link {
   color: #fff;
   font-size: 1rem;
 }
 
-.navbar-scrolled .nav-link {
-  color: #000;
-}
-
-/* btn light */
 .navbar-scrolled .btn-light {
   background-color: #000;
   color: #fff;
-}
-
-/* Dropdown Icon Color */
-.dropdown a i {
-  color: #ff4500;
 }
 
 .navbar-scrolled .dropdown-menu {
@@ -145,75 +144,50 @@ body {
 }
 
 .navbar-scrolled .dropdown-item:hover {
-  background-color: #ff4500;
   color: #fff;
+  background-color: #101010;
 }
 
-/* Button Styling */
-.btn-orange {
-  border-radius: 0.3rem;
-  font-weight: 500;
-}
-
+/* Dropdown Menu */
 .dropdown-menu {
   background-color: #000;
-  border: 1px solid #555555;
+  border: 1px solid #555;
   border-radius: 0.3rem;
   padding: 0.5rem;
 }
 
-/* Dropdown Item Styling */
 .dropdown-item {
   color: #fff;
   padding: 0.5rem 1rem;
   text-align: center;
 }
 
-.navbar-scrolled .dropdown-item {
-  color: #000;
-}
-
-.dropdown-item:hover {
-  background-color: #ff4500;
-  color: #fff;
-}
-
-.navbar-scrolled .dropdown-item:hover {
-  background-color: #101010;
-}
-
 /* Navbar Collapse */
 .navbar-collapse {
   background-color: #000;
-  box-shadow: 0px 0px 20px 1px #ff440083;
+  box-shadow: 0 0 20px 1px #ff440083;
   border-radius: 0.5rem;
 }
 
 .navbar-scrolled .navbar-collapse {
   background-color: #e4e4e4;
-  box-shadow: 0px 0px 20px 1px #b2b2b2;
+  box-shadow: 0 0 20px 1px #b2b2b2;
 }
-/* hero section */
+
+/* Hero Section */
 .hero {
   padding: 4rem 1rem;
-  background: radial-gradient(
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 1)
-    ),
-    url(../dist/img/hero-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: radial-gradient(#000, rgba(0, 0, 0, 0.5), #000) center/cover
+      no-repeat,
+    url(../dist/img/hero-bg.png) center/cover no-repeat;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-position: center;
-  animation: fadeIn 2s ease-in-out;
+  animation: 2s ease-in-out fadeIn;
 }
 
-/* slider section */
-
+/* Slider Section */
 .merk .slider {
   overflow: hidden;
 }
@@ -221,7 +195,7 @@ body {
 .merk .slide-track {
   display: flex;
   flex-wrap: nowrap;
-  animation: scroll 20s linear infinite;
+  animation: 20s linear infinite scroll;
 }
 
 .merk .slide {
@@ -233,14 +207,14 @@ body {
   height: 50px;
 }
 
-/* feature section */
-.features {
+/* Features Section */
+.bg-grey {
   background-color: #e4e4e4;
   border-radius: 1rem;
 }
 
 .features .title {
-  background: linear-gradient(90deg, #1100ff, #ff4500);
+  background: linear-gradient(90deg, #10f, #ff4500);
   background-clip: text;
   font-size: 3rem;
 }
@@ -251,15 +225,10 @@ body {
 }
 
 .features .feature-card {
-  border: 1px solid #555555;
+  border: 1px solid #555;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.features .feature-card h5 {
-  font-size: 1.25rem;
-  font-weight: 600;
 }
 
 .features .feature-card p {
@@ -267,24 +236,26 @@ body {
   color: #101010;
 }
 
-/* software section */
+/* Software Section */
 .software {
   background: radial-gradient(at right, #ff44000f, #000);
 }
+
 .software .title {
   background-size: 200%;
-  animation: gradient-animation 10s alternate infinite;
+  animation: 10s infinite alternate gradient-animation;
 }
 
+.affiliate-hero .title,
 .software .subheading {
   color: #fff;
 }
 
-/* nav tabs */
+/* Tabs */
 .nav-tabs .nav-item button {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #555555;
+  color: #555;
   border: 0;
 }
 
@@ -297,19 +268,14 @@ body {
   font-weight: 600;
 }
 
+.nav-tabs .nav-item button:focus,
 .nav-tabs .nav-item button:hover {
   border: 0;
   border-left: 1px solid #ff4500;
   border-radius: 0;
 }
-.nav-tabs .nav-item button:focus {
-  border: 0;
-  border-left: 1px solid #ff4500;
-  border-radius: 0;
-}
 
-/* slider card */
-
+/* Slide Card */
 .slide-card .card {
   background: radial-gradient(at bottom, #ff44001b, #000);
   border-radius: 0.5rem;
@@ -334,27 +300,33 @@ body {
   line-height: 2em;
 }
 
-/* affiliates hero section */
-
+/* Affiliate Hero Section */
 .affiliate-hero {
   background: radial-gradient(at left, #ff44000f, #ffffff0b, #000);
 }
 
-.affiliate-hero .title {
-  color: #fff;
-}
-.affiliate-hero .title span {
-  color: #ff4500;
-}
-
-/* Responsive Breakpoints */
-
-/* Mobile Landscape */
-@media screen and (min-width: 576px) {
-  /* merk section */
+/* partner section */
+.partner .title {
+  color: #101010;
+  font-weight: 600;
+  font-size: 3rem;
 }
 
-/* Tablet */
+.partner h5 {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.partner ul li {
+  font-size: 1rem;
+}
+
+.partner h5.linear-title {
+  background: linear-gradient(90deg, #555, #ff4500, #555);
+  background-clip: text;
+}
+
+/* Media Queries */
 @media screen and (min-width: 768px) {
   .navbar-collapse.collapse-show {
     display: flex !important;
@@ -363,18 +335,11 @@ body {
     justify-content: center;
   }
 
-  /* hero section */
   .hero {
-    background: radial-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 1)
-      ),
-      url(../dist/img/hero-bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), #000)
+        center/cover no-repeat,
+      url(../dist/img/hero-bg.png) center/cover no-repeat;
     width: 100%;
-    background-position: center;
   }
 
   .title {
@@ -384,8 +349,6 @@ body {
   .text {
     font-size: 1.2rem;
   }
-
-  /* merk section */
 
   .slide {
     cursor: pointer;
@@ -402,7 +365,6 @@ body {
     transition: 0.4s;
   }
 
-  /* software section */
   .software {
     background: radial-gradient(at left, #ff44000f, #000);
   }
@@ -411,16 +373,21 @@ body {
     font-size: 3rem;
   }
 
-  /* affiliate section */
   .affiliate-hero .title {
     width: 75%;
   }
+
+  /* partner */
+
+  .container-partner {
+    border-right: 1px solid #555;
+    border-left: 1px solid #555;
+  }
 }
 
-/* Laptop */
 @media screen and (min-width: 992px) {
   .navbar-brand {
-    border-right: 1px solid #555555;
+    border-right: 1px solid #555;
   }
 
   .nav-item.dropdown:hover .dropdown-menu {
@@ -448,19 +415,16 @@ body {
     box-shadow: none;
   }
 
-  /* hero section */
   .hero {
     padding: 8rem 1rem;
     background-size: 100%;
   }
 
-  /* merk section */
   .merk .slide-track {
     animation: none;
     flex-wrap: wrap;
   }
 
-  /* features section */
   .features .title {
     width: 75%;
     font-size: 3.5rem;
@@ -469,8 +433,6 @@ body {
   .features .text {
     width: 75%;
   }
-
-  /* software section */
 
   .software .title {
     font-size: 4rem;
@@ -481,7 +443,6 @@ body {
   }
 }
 
-/* Desktop */
 @media screen and (min-width: 1200px) {
   .hero {
     background-size: cover;
@@ -491,8 +452,4 @@ body {
   .btn-orange {
     font-size: 1.1rem;
   }
-}
-
-/* Large Desktop */
-@media screen and (min-width: 1440px) {
 }
